@@ -1,0 +1,320 @@
+/* Components.css - Optimized */
+
+:root {
+    /* Define your CSS variables here for colors, font sizes, spacings, etc. */
+    /* Example: */
+    /* --dark-bg: #333; */
+    --light-green: #abc;
+    --green-accent: #def;
+}
+
+/* Common section styling for all sections */
+.section {
+    padding: 4rem 0;
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    /* Ensures text is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: center;
+    /* Centers content vertically */
+}
+
+.section h2,
+.section p {
+    margin: 0 auto;
+    /* Auto margin for horizontal centering */
+}
+
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--green-accent);
+}
+
+.section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-left: auto; /* Center paragraph text horizontally */
+    margin-right: auto;
+    max-width: 120ch; /* Constrain the width of the text */
+    text-align: justify; /* Optional: Justify the text for better alignment */
+}
+
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--green-accent);
+    margin: 0 auto; /* Center heading */
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin: 0 auto; /* Center paragraph text */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-bg);
+    color: var(--light-green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand {
+    color: var(--green-accent);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: var(--light-green);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--green-accent);
+}
+
+.navbar-toggler {
+    background-color: var(--dark-bg);
+    border: none;
+    color: var(--light-green);
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    /* Add a hamburger icon background image if needed */
+}
+
+/* Home Section */
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-bg);
+    color: var(--green-accent);
+    padding: 4rem 0;
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.project-grid {
+    max-width: 160ch; /* Match the About Me and Skills section width */
+    margin: 0 auto; /* Center the grid container */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Ensure the responsive design remains intact */
+@media (max-width: 768px) {
+    .project-grid {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 0 2rem; /* Add padding to not touch the edges */
+    }
+}
+
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.skills-container {
+    max-width: 120ch; /* Match the About Me section width */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Align the text to the left within the centered container */
+}
+
+.skill-category {
+    margin-bottom: 2rem; /* Add space between categories */
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align skill items to the start */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.skill-list li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: var(--green-accent);
+    color: var(--dark-bg);
+    border-radius: 5px;
+    /* Ensures individual skills are visually distinct */
+}
+
+/* Ensure the responsive design remains intact */
+@media (max-width: 768px) {
+    .skills-container {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 0 2rem; /* Add padding to not touch the edges */
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--dark-bg);
+    color: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--green-accent);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.contact-links img {
+    height: 24px;
+    /* Adjust as necessary */
+    width: 24px;
+    /* Adjust as necessary */
+    vertical-align: middle;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-green);
+    background-color: #333;
+    color: white;
+}
+
+.contact-section button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--green-accent);
+    color: var(--dark-bg);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: var(--light-green);
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        display: initial;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+}
