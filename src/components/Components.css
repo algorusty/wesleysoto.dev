@@ -1,34 +1,23 @@
-/* Components.css - Optimized */
+/* Components.css */
 
 :root {
-    /* Define your CSS variables here for colors, font sizes, spacings, etc. */
-    /* Example: */
-    /* --dark-bg: #333; */
+    /* --dark-bg: #333; Example background color */
     --light-green: #abc;
     --green-accent: #def;
+    --max-content-width: 80vw; /* Consistent max width for content */
 }
 
-/* Common section styling for all sections */
+/* Common section styling */
 .section {
     padding: 4rem 0;
     background-color: var(--dark-bg);
     color: white;
     text-align: center;
-    /* Ensures text is centered */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers content horizontally */
     justify-content: center;
-    /* Centers content vertically */
 }
-
-.section h2,
-.section p {
-    margin: 0 auto;
-    /* Auto margin for horizontal centering */
-}
-
 
 .section h2 {
     font-size: 2.5rem;
@@ -39,14 +28,17 @@
 .section p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    max-width: var(--max-content-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-section p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    margin-left: auto; /* Center paragraph text horizontally */
+    margin-left: 1rem; /* Center paragraph text horizontally */
     margin-right: auto;
-    max-width: 120ch; /* Constrain the width of the text */
+    max-width: var(--max-content-width); /* Constrain the width of the text */
     text-align: justify; /* Optional: Justify the text for better alignment */
 }
 
@@ -64,7 +56,7 @@
     margin: 0 auto; /* Center paragraph text */
 }
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
     background-color: var(--dark-bg);
     color: var(--light-green);
@@ -76,6 +68,7 @@
     top: 0;
     z-index: 10;
 }
+
 
 .navbar-brand {
     color: var(--green-accent);

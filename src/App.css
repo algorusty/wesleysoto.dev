@@ -1,53 +1,33 @@
 /* App.css */
 
 :root {
-    --dark-bg: #121212;
+    --dark-bg: #333;
     --green-accent: #64ffda;
     --light-green: #80cbc4;
-    --green-gradient-start: #0f0f0f; /* Adjust to match exact color from image */
-    --green-gradient-end: #262626; /* Adjust to match exact color from image */
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: transparent;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navbar a {
-    color: var(--green-accent);
-    text-decoration: none;
-    margin-left: 15px;
-  }
-  
-  .navbar a:hover {
-    color: var(--light-green);
-  }
-  
-  /* Main Content Styles */
-  .main-content {
+    --green-gradient-start: #0f0f0f;
+    --green-gradient-end: #262626;
+}
+
+/* Main Content Styles */
+.main-content {
     background: linear-gradient(to bottom, var(--green-gradient-start), var(--green-gradient-end));
-    text-align: center;
     padding: 5rem 1rem;
-  }
-  
-  .main-content h1 {
+}
+
+.main-content h1 {
     color: var(--green-accent);
     font-size: 4rem;
     margin-bottom: 2rem;
-  }
-  
-  .main-content p {
+}
+
+.main-content p {
     color: var(--light-green);
     font-size: 1.25rem;
     margin-bottom: 3rem;
-  }
-  
-  /* Code snippet styles */
-  .code-snippet {
+}
+
+/* Code snippet styles */
+.code-snippet {
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -55,10 +35,10 @@
     margin: 20px 0;
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto;
-  }
-  
-  /* Button and Link Styles */
-  .button {
+}
+
+/* Button and Link Styles */
+.button {
     background: var(--dark-bg);
     color: var(--green-accent);
     border: 1px solid var(--green-accent);
@@ -68,34 +48,25 @@
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
     display: inline-block;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background: var(--green-accent);
     color: var(--dark-bg);
-  }
-  
-  /* Utility Classes */
-  .text-center {
+}
+
+/* Utility Classes */
+.text-center {
     text-align: center;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .main-content h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .main-content p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .navbar a {
-      margin: 5px 0;
-    }
-  }
-  
+}
