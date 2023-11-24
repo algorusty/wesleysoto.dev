@@ -1,4 +1,7 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
+// import githubMark from '../public/github-mark.png';
+
 import './Components.css';
 
 function Navbar() {
@@ -7,25 +10,25 @@ function Navbar() {
             <a className="navbar-brand" href="/">
                 Wesley Soto
             </a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="#home">Home</a>
+                        <a className="nav-link" href="/home">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#contact">Contact</a>
+                        <a className="nav-link" href="/contact">Contact</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#about">About</a>
+                        <a className="nav-link" href="/about">About</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#projects">Projects</a>
+                        <a className="nav-link" href="/projects">Projects</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#skills">Skills</a>
+                        <a className="nav-link" href="/skills">Skills</a>
                     </li>
 
                 </ul>
@@ -153,10 +156,12 @@ function Contact() {
                     <img src="https://static.licdn.com/aero-v1/sc/h/fzptdwtvgnpgk4tf76hulq7" alt="LinkedIn" />
                 </a>
                 <a href="https://github.com/algorusty" target="_blank" rel="noopener noreferrer">
-                    <img src="./github-mark.png" alt="GitHub" />
+                <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+                    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                </svg>
                 </a>
                 <a href="mailto:jobs@wesleysoto.dev" target="_blank" rel="noopener noreferrer">
-                    jobs@wesleysoto.dev
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3ZM1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z"></path></svg>
                 </a>
             </div>
 
