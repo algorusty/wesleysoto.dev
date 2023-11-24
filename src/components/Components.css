@@ -32,8 +32,8 @@ body {
     background-color: transparent;
     background-image: url('../../public/background.png');
     background-repeat: no-repeat;
+    background-size: 120%; /* Ensures background covers entire viewport */
     background-attachment: fixed;
-    background-size: cover + 20%;
     background-position: center center;
     animation: backgroundShift 15s infinite linear; /* Apply the animation */
 }
@@ -210,8 +210,18 @@ body {
     margin-right: 1rem;
 }
 
+@media (max-width: 1200px) {
+    body {
+        background-size: 250%; /* Cover the entire area on smaller screens */
+    }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
+    body {
+        background-size: 300%; /* Cover the entire area on smaller screens */
+    }
     .navbar-nav {
         flex-direction: column;
         width: 100%;
