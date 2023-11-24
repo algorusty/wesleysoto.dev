@@ -33,7 +33,7 @@ body {
     background-image: url('../../public/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 120%;
+    background-size: cover + 20%;
     background-position: center center;
     animation: backgroundShift 15s infinite linear; /* Apply the animation */
 }
