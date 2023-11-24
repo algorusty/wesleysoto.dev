@@ -1,36 +1,31 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import githubMark from '../public/github-mark.png';
+import { HashLink as Link } from 'react-router-hash-link'; // Import HashLink
 
 import './Components.css';
 
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a className="navbar-brand" href="/">
+            <Link smooth className="navbar-brand" to="#home">
                 Wesley Soto
-            </a>
-            {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button> */}
+            </Link>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="/home">Home</a>
+                        <Link smooth className="nav-link" to="#home">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/contact">Contact</a>
+                        <Link smooth className="nav-link" to="#contact">Contact</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/about">About</a>
+                        <Link smooth className="nav-link" to="#about">About</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/projects">Projects</a>
+                        <Link smooth className="nav-link" to="#projects">Projects</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/skills">Skills</a>
+                        <Link smooth className="nav-link" to="#skills">Skills</Link>
                     </li>
-
                 </ul>
             </div>
         </nav>
