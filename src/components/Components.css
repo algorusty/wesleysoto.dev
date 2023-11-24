@@ -210,7 +210,7 @@ body {
     margin-right: 1rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     body {
         background-size: 250%; /* Cover the entire area on smaller screens */
     }
