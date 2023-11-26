@@ -2,9 +2,9 @@
 
 /* Color Palette and Global Variables */
 :root {
-    --dark-bg: #333;
-    --light-green: #abc;
-    --green-accent: #def;
+    --dark-bg: #33333333;
+    --light-green: rgb(197, 197, 197);
+    --green-accent: rgb(235, 235, 235);
     --max-content-width: 80vw;
     --transition-speed: 0.3s;
     --border-radius: 5px;
@@ -17,14 +17,6 @@
     padding: 0;
 }
 
-@keyframes backgroundShift {
-    0% { background-position: center; }
-    30% { background-position: calc(50% + 40px) calc(50% - 10px); }
-    60% { background-position: calc(50% + 10px) calc(50% + 10px); }
-    100% { background-position: center; }
-}
-
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -35,7 +27,7 @@ body {
     background-size: 120%; /* Ensures background covers entire viewport */
     background-attachment: fixed;
     background-position: center center;
-    animation: backgroundShift 15s infinite linear; /* Apply the animation */
+    transition: background-position 5s ease;
 }
 
 .background-overlay {
@@ -88,6 +80,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Soft glowy shadow */
+    border-radius: 15px;
 }
 
 
@@ -161,9 +155,12 @@ body {
 .skills-section .skill-list li {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
-    background-color: var(--green-accent);
-    color: var(--dark-bg);
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent dark background */
+    color: var(--green-accent);
     border-radius: var(--border-radius);
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
 }
 
 /* Contact Section */
@@ -269,12 +266,24 @@ button:hover, .nav-link:hover, .skill-list li:hover {
 .navbar-brand::after {
     content: '';
     display: block;
-    width: 100%;
+    width: 0;
     height: 2px;
-    background-color: var(--green-accent);
+    background-color: rgba(255, 255, 255, 0.5);
     transition: width var(--transition-speed) ease;
 }
 
 .navbar-brand:hover::after {
+    width: 100%;
+}
+.nav-link::after {
+    content: '';
+    display: block;
     width: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
