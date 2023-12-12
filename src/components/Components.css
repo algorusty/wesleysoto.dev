@@ -217,7 +217,7 @@ body {
 @media (max-width: 768px) {
 
     body {
-        background-size: 350%; /* Cover the entire area on smaller screens */
+        background-size: 375%; /* Cover the entire area on smaller screens */
     }
     .navbar-nav {
         flex-direction: column;
